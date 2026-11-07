@@ -2,7 +2,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --cream: #f5f0e8;
+  --cream: #d4e8d0;
   --ink: #111110;
   --ink-soft: #3a3a38;
   --ink-muted: #7a7a74;
@@ -18,7 +18,7 @@ body {
   background: var(--cream);
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -55,9 +55,9 @@ section:first-of-type { border-top: none; }
 }
 
 .hero-names {
-  font-family: var(--font-display);
+  font-family: 'Libre Caslon Display', serif;
   font-size: clamp(56px, 14vw, 96px);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: -0.01em;
   line-height: 0.95;
   text-transform: uppercase;
@@ -93,6 +93,14 @@ section:first-of-type { border-top: none; }
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--ink-muted);
+}
+
+.hero-address {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 12px;
 }
 
 .hero-rule {
@@ -192,6 +200,21 @@ section:first-of-type { border-top: none; }
   color: var(--ink-soft);
 }
 
+.dresscode-ref {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.dresscode-ref a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.dresscode-ref a:hover { color: var(--gold); }
+
 /* ─── Hotels ───────────────────────────────────────────────────────────────── */
 .hotel-list {
   list-style: none;
@@ -265,6 +288,45 @@ section:first-of-type { border-top: none; }
   font-size: 14px;
   color: var(--ink-soft);
   line-height: 1.7;
+}
+
+/* ─── RSVP ─────────────────────────────────────────────────────────────────── */
+.rsvp-intro {
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.rsvp-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.rsvp-btn:hover { background: var(--ink-soft); }
+
+/* ─── When & Where ─────────────────────────────────────────────────────────── */
+.when-where-text {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.when-where-note {
+  margin-top: 16px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
 }
 
 /* ─── Footer ───────────────────────────────────────────────────────────────── */

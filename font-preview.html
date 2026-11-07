@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Font Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Bodoni+Moda:ital,wght@0,700;1,400&family=GFS+Didot&family=Libre+Caslon+Display&family=Cormorant+SC:wght@600&family=Yeseva+One&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #f5f0e8;
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .row {
+      display: flex;
+      align-items: baseline;
+      gap: 32px;
+      border-bottom: 1px solid #d4cfc4;
+      padding-bottom: 48px;
+    }
+    .name {
+      font-size: 72px;
+      line-height: 1;
+      color: #111110;
+    }
+    .label {
+      font-family: system-ui, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #7a7a74;
+      white-space: nowrap;
+    }
+    .f1 { font-family: 'Playfair Display', serif; font-weight: 700; }
+    .f2 { font-family: 'Bodoni Moda', serif; font-weight: 700; }
+    .f3 { font-family: 'GFS Didot', serif; }
+    .f4 { font-family: 'Libre Caslon Display', serif; }
+    .f5 { font-family: 'Cormorant SC', serif; font-weight: 600; }
+    .f6 { font-family: 'Yeseva One', serif; }
+  </style>
+</head>
+<body>
+
+  <div class="row">
+    <span class="name f1">Vineet &amp; Neha</span>
+    <span class="label">Playfair Display</span>
+  </div>
+
+  <div class="row">
+    <span class="name f2">Vineet &amp; Neha</span>
+    <span class="label">Bodoni Moda</span>
+  </div>
+
+  <div class="row">
+    <span class="name f3">Vineet &amp; Neha</span>
+    <span class="label">GFS Didot</span>
+  </div>
+
+  <div class="row">
+    <span class="name f4">Vineet &amp; Neha</span>
+    <span class="label">Libre Caslon Display</span>
+  </div>
+
+  <div class="row">
+    <span class="name f5">Vineet &amp; Neha</span>
+    <span class="label">Cormorant SC</span>
+  </div>
+
+  <div class="row">
+    <span class="name f6">Vineet &amp; Neha</span>
+    <span class="label">Yeseva One</span>
+  </div>
+
+</body>
+</html>

@@ -9,7 +9,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -20,10 +20,10 @@
     <div class="nav-inner">
       <a href="#hero" class="nav-brand">V &amp; N</a>
       <ul class="nav-links">
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#venue">Venue</a></li>
+        <li><a href="#rsvp">Hotel Survey</a></li>
         <li><a href="#hotels">Hotels</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#when-where">When &amp; Where</a></li>
+        <!-- <li><a href="#dresscode">Dress Code</a></li> -->
       </ul>
     </div>
   </nav>
@@ -42,37 +42,17 @@
           <span class="hero-date" id="hero-date"></span>
           <span class="hero-location">Brooklyn, New York</span>
         </div>
-        <div class="hero-rule"></div>
+<div class="hero-rule"></div>
       </div>
     </section>
 
-    <!-- Schedule -->
-    <section id="schedule">
+    <!-- RSVP / Hotel Survey -->
+    <section id="rsvp">
       <div class="container">
-        <p class="section-label">On the day</p>
-        <h2 class="section-title">Schedule</h2>
-        <ul class="schedule-list" id="schedule-list"></ul>
-      </div>
-    </section>
-
-    <!-- Venue -->
-    <section id="venue">
-      <div class="container">
-        <p class="section-label">Getting there</p>
-        <h2 class="section-title">Venue</h2>
-        <p class="venue-address" id="venue-address"></p>
-        <a class="map-link" id="venue-map" href="#" target="_blank" rel="noopener">
-          Open in Maps ↗
-        </a>
-      </div>
-    </section>
-
-    <!-- Dress Code -->
-    <section id="dresscode">
-      <div class="container">
-        <p class="section-label">What to wear</p>
-        <h2 class="section-title">Dress Code</h2>
-        <p class="dresscode-text" id="dresscode-text"></p>
+        <p class="section-label">Let us know</p>
+        <h2 class="section-title">Hotel Survey</h2>
+        <p class="rsvp-intro">Help us plan by letting us know if you'll need a hotel room. Takes less than a minute.</p>
+        <a class="rsvp-btn" href="https://tally.so/r/VpGV4a" target="_blank" rel="noopener">Fill out the survey ↗</a>
       </div>
     </section>
 
@@ -85,12 +65,24 @@
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq">
+    <!-- When & Where -->
+    <section id="when-where">
       <div class="container">
-        <p class="section-label">Good to know</p>
-        <h2 class="section-title">FAQ</h2>
-        <ul class="faq-list" id="faq-list"></ul>
+        <p class="section-label">The wedding</p>
+        <h2 class="section-title">When &amp; Where</h2>
+        <p class="when-where-text">Our home; rooftop of 558 Fulton Street, Brooklyn, NY.</p>
+        <p class="when-where-text">Plan for around <strong>4pm to forever</strong>.</p>
+        <p class="when-where-note">More details to follow.</p>
+      </div>
+    </section>
+
+    <!-- Dress Code -->
+    <section id="dresscode" style="display:none">
+      <div class="container">
+        <p class="section-label">What to wear</p>
+        <h2 class="section-title">Dress Code</h2>
+        <p class="dresscode-text" id="dresscode-text"></p>
+        <p class="dresscode-ref">Feel free to reference <a href="https://www.vogue.com/article/indian-wedding-etiquette" target="_blank" rel="noopener">this article</a> if you want more guidance — and check out the author&nbsp;;p</p>
       </div>
     </section>
   </main>
@@ -112,26 +104,6 @@
     document.getElementById("hero-p2").textContent = WEDDING.partner2.toUpperCase();
     document.getElementById("hero-date").textContent = WEDDING.date.display;
 
-    // Schedule
-    const scheduleList = document.getElementById("schedule-list");
-    WEDDING.schedule.forEach(item => {
-      const li = document.createElement("li");
-      li.className = "schedule-item";
-      li.innerHTML = `
-        <span class="schedule-time">${item.time}</span>
-        <span>
-          <span class="schedule-event">${item.event}</span>
-          ${item.note ? `<p class="schedule-note">${item.note}</p>` : ""}
-        </span>
-      `;
-      scheduleList.appendChild(li);
-    });
-
-    // Venue
-    document.getElementById("venue-address").textContent = WEDDING.venue.address;
-    const mapLink = document.getElementById("venue-map");
-    mapLink.href = WEDDING.venue.mapsUrl;
-
     // Dress code
     document.getElementById("dresscode-text").textContent = WEDDING.dresscode;
 
@@ -147,18 +119,6 @@
         <a class="hotel-maps" href="${hotel.mapsUrl}" target="_blank" rel="noopener">Directions ↗</a>
       `;
       hotelList.appendChild(li);
-    });
-
-    // FAQ
-    const faqList = document.getElementById("faq-list");
-    WEDDING.faq.forEach(item => {
-      const li = document.createElement("li");
-      li.className = "faq-item";
-      li.innerHTML = `
-        <p class="faq-q">${item.q}</p>
-        <p class="faq-a">${item.a}</p>
-      `;
-      faqList.appendChild(li);
     });
 
     // Footer
