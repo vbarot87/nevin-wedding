@@ -2,12 +2,14 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --cream: #d4e8d0;
-  --ink: #111110;
-  --ink-soft: #3a3a38;
-  --ink-muted: #7a7a74;
+  --cream: #f5f0e8;
+  --ink: #3c1f1a;
+  --ink-soft: #6b3528;
+  --ink-muted: #9b7a62;
   --gold: #b49a6a;
-  --rule: #d4cfc4;
+  --garnet: #8B3030;
+  --squiggle: #c4907e;
+  --rule: #d0bfaa;
   --font-display: 'Cormorant Garamond', 'Georgia', serif;
   --font-body: 'Inter', system-ui, sans-serif;
 }
@@ -21,6 +23,19 @@ body {
   font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+
+/* ─── Full-page florals ────────────────────────────────────────────────────── */
+.page-florals {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* ─── Layout ───────────────────────────────────────────────────────────────── */
@@ -33,16 +48,27 @@ body {
 
 section {
   padding: 64px 0;
-  border-top: 1px solid var(--rule);
 }
-
-section:first-of-type { border-top: none; }
 
 /* ─── Hero ─────────────────────────────────────────────────────────────────── */
 #hero {
   padding: 80px 0 64px;
   text-align: center;
   border-top: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-illustration {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hero-illustration > g {
+  opacity: 0.22;
 }
 
 .hero-eyebrow {
@@ -231,26 +257,27 @@ section:first-of-type { border-top: none; }
 .hotel-item:first-child { border-top: 1px solid var(--rule); }
 
 .hotel-name {
-  font-size: 15px;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
   margin-bottom: 4px;
 }
 
 .hotel-address {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--ink-muted);
   margin-bottom: 6px;
 }
 
 .hotel-note {
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
   color: var(--gold);
   margin-bottom: 8px;
 }
 
 .hotel-maps {
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink);
