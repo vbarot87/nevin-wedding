@@ -12,8 +12,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
+  <style>
+    #password-gate {
+      position: fixed; inset: 0; background: #faf7f2;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      z-index: 9999; font-family: 'Cormorant Garamond', serif;
+    }
+    #password-gate h2 { font-size: 1.8rem; color: #3a2e1e; margin-bottom: 1.5rem; font-weight: 400; letter-spacing: 0.05em; }
+    #password-gate input {
+      border: 1px solid #c9a96e; background: transparent; padding: 0.6rem 1rem;
+      font-family: inherit; font-size: 1rem; color: #3a2e1e; text-align: center;
+      outline: none; width: 180px; letter-spacing: 0.1em;
+    }
+    #password-gate button {
+      margin-top: 1rem; padding: 0.6rem 2rem; background: #c9a96e; border: none;
+      color: #fff; font-family: inherit; font-size: 0.9rem; letter-spacing: 0.12em;
+      cursor: pointer;
+    }
+    #password-gate .error { color: #a0522d; font-size: 0.85rem; margin-top: 0.75rem; }
+  </style>
 </head>
 <body>
+  <div id="password-gate">
+    <h2>Vineet &amp; Neha</h2>
+    <input type="password" id="pw-input" placeholder="Enter password" />
+    <button onclick="checkPassword()">Enter</button>
+    <p class="error" id="pw-error" style="display:none">Incorrect password</p>
+  </div>
+  <script>
+    function checkPassword() {
+      if (document.getElementById('pw-input').value === 'May29') {
+        document.getElementById('password-gate').style.display = 'none';
+      } else {
+        document.getElementById('pw-error').style.display = 'block';
+      }
+    }
+    document.getElementById('pw-input').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') checkPassword();
+    });
+  </script>
 
   <!-- Full-page scattered florals -->
   <svg class="page-florals" viewBox="0 0 680 2400" preserveAspectRatio="xMidYMin meet" xmlns="http://www.w3.org/2000/svg" fill="none">
