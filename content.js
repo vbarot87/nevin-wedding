@@ -12,7 +12,7 @@ dresscode: `Indian formal attire is warmly encouraged — gold and beige are the
     {
       name: "Even Hotel Brooklyn",
       address: "46 Nevins St, Brooklyn, NY 11217",
-      note: "~12 min walk to venue",
+      note: "~5 min walk to venue",
       mapsUrl: "https://maps.google.com/?q=Even+Hotel+Brooklyn",
     },
     {
@@ -24,7 +24,7 @@ dresscode: `Indian formal attire is warmly encouraged — gold and beige are the
     {
       name: "The Livingston Hotel Brooklyn",
       address: "212 Schermerhorn St, Brooklyn, NY 11201",
-      note: "~10 min walk to venue",
+      note: "~4 min walk to venue",
       mapsUrl: "https://maps.google.com/?q=The+Livingston+Hotel+Brooklyn",
       bookingUrl: "https://www.hyatt.com/events/en-US/group-booking/LGAJL/36200871/G-SCDW",
     },
