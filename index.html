@@ -463,7 +463,12 @@
       <div class="container">
         <p class="section-label">Where to stay</p>
         <h2 class="section-title">Hotels</h2>
-        <ul class="hotel-list" id="hotel-list"></ul>
+
+        <p class="hotel-group-label">Discounted Room Blocks</p>
+        <ul class="hotel-list" id="hotel-list-block"></ul>
+
+        <p class="hotel-group-label">Other Hotels in the Area</p>
+        <ul class="hotel-list" id="hotel-list-other"></ul>
       </div>
     </section>
 
@@ -510,7 +515,8 @@
     document.getElementById("dresscode-text").textContent = WEDDING.dresscode;
 
     // Hotels
-    const hotelList = document.getElementById("hotel-list");
+    const blockList = document.getElementById("hotel-list-block");
+    const otherList = document.getElementById("hotel-list-other");
     WEDDING.hotels.forEach(hotel => {
       const li = document.createElement("li");
       li.className = "hotel-item";
@@ -519,9 +525,9 @@
         <p class="hotel-address">${hotel.address}</p>
         ${hotel.note ? `<p class="hotel-note">${hotel.note}</p>` : ""}
         <a class="hotel-maps" href="${hotel.mapsUrl}" target="_blank" rel="noopener">Directions ↗</a>
-        ${hotel.bookingUrl ? `<a class="hotel-maps" href="${hotel.bookingUrl}" target="_blank" rel="noopener">Book Room ↗</a>` : ""}
+        ${hotel.bookingUrl ? `<p class="hotel-booking">Use our special room block link <a href="${hotel.bookingUrl}" target="_blank" rel="noopener">here</a></p>` : ""}
       `;
-      hotelList.appendChild(li);
+      (hotel.bookingUrl ? blockList : otherList).appendChild(li);
     });
 
     // Footer
