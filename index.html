@@ -519,6 +519,7 @@
         <p class="hotel-address">${hotel.address}</p>
         ${hotel.note ? `<p class="hotel-note">${hotel.note}</p>` : ""}
         <a class="hotel-maps" href="${hotel.mapsUrl}" target="_blank" rel="noopener">Directions ↗</a>
+        ${hotel.bookingUrl ? `<a class="hotel-maps" href="${hotel.bookingUrl}" target="_blank" rel="noopener">Book Room ↗</a>` : ""}
       `;
       hotelList.appendChild(li);
     });
