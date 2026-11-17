@@ -22,6 +22,13 @@ dresscode: `Indian formal attire is warmly encouraged — gold and beige are the
       mapsUrl: "https://maps.google.com/?q=Sheraton+Brooklyn+New+York",
     },
     {
+      name: "The Livingston Hotel Brooklyn",
+      address: "212 Schermerhorn St, Brooklyn, NY 11201",
+      note: "~10 min walk to venue",
+      mapsUrl: "https://maps.google.com/?q=The+Livingston+Hotel+Brooklyn",
+      bookingUrl: "https://www.hyatt.com/events/en-US/group-booking/LGAJL/36200871/G-SCDW",
+    },
+    {
       name: "Residence Inn Jersey City",
       address: "Harborside, Jersey City, NJ",
       note: "PATH + Subway (~45 min) · Great option for guests preferring New Jersey",
